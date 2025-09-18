@@ -1,0 +1,6 @@
+---
+title: "P8105_hw1_ml5218"
+author: "Muying Li"
+date: "2025-09-18"
+output: github_document
+---
