@@ -4,7 +4,7 @@ author: "Muying Li"
 date: "2025-09-18"
 output: github_document
 ---
-# test line
+
 # Problem 1
 
 Load packages
@@ -83,10 +83,10 @@ df
 
 ## Try to take the mean of each variable in the `df`
 ```{r}
-mean(df$random_norm)
-mean(df$greater_than0)
-mean(df$char_vec)
-mean(df$factor_vec)
+mean(df %>% pull(random_norm))
+mean(df %>% pull(greater_than0))
+mean(df %>% pull(char_vec))
+mean(df %>% pull(factor_vec))
 ```
 Only the numeric and logical vectors work, while the character and factor vectors fail. 
 
@@ -95,9 +95,9 @@ Only the numeric and logical vectors work, while the character and factor vector
 
 *Apply the `as.numeric` function to the logical, character, and factor variables*
 ```{r eval = FALSE}
-as.numeric(df$greater_than0)
-as.numeric(df$char_vec)
-as.numeric(df$factor_vec)
+as.numeric(df %>% pull(greater_than0))
+as.numeric(df %>% pull(char_vec))
+as.numeric(df %>% pull(factor_vec))
 ```
 
 1. Both logical and factor vectors can be converted to numeric. 
